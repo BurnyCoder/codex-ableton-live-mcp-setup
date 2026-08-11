@@ -18,7 +18,7 @@ from typing import Iterable, Sequence
 from urllib.parse import unquote
 
 
-IGNORED_DIRECTORIES = {".git", ".venv", "__pycache__", ".pytest_cache"}
+IGNORED_DIRECTORIES = {".git", ".local", ".venv", "__pycache__", ".pytest_cache"}
 
 
 def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
@@ -108,17 +108,22 @@ def check_markdown(path: Path) -> list[str]:
 
 
 def check_readme_contract(root: Path) -> list[str]:
-    """Require the methodology, safety, quickstart, and architecture promised for v1."""
+    """Require the complete setup path promised by the public README."""
 
     readme = root / "README.md"
     if not readme.is_file():
         return ["README.md is missing"]
     text = readme.read_text(encoding="utf-8").casefold()
     requirements = {
-        "methodology": "methodology",
-        "quick start": "quick start",
-        "safety": "safety",
-        "Mermaid architecture graph": "```mermaid",
+        "requirements": "## requirements",
+        "safety warning": "[!caution]",
+        "installation": "## 7. install ableton live mcp",
+        "Ableton activation": "## 9. activate the remote script in ableton live",
+        "Computer Use setup": "## 10. enable computer use in codex desktop",
+        "post-Live validation": "## 12. validate the live connection",
+        "update instructions": ".\\manage.ps1 update",
+        "rollback instructions": ".\\manage.ps1 rollback",
+        "Mermaid connection graph": "```mermaid",
     }
     return [f"README.md is missing {label}" for label, token in requirements.items() if token not in text]
 
