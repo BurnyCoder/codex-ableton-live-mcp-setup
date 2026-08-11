@@ -39,7 +39,7 @@ jobs:
         uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
 
       - name: Install locked uv and Python 3.14
-        # astral-sh/setup-uv v7.6.0, pinned to its full commit SHA.
+        # astral-sh/setup-uv v9.0.0, pinned to its full commit SHA.
         # Source: https://docs.astral.sh/uv/guides/integration/github/
         uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9
         with:
@@ -102,7 +102,7 @@ jobs:
         uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
 
       - name: Install locked uv and Python 3.14
-        # astral-sh/setup-uv v7.6.0, pinned to its full commit SHA.
+        # astral-sh/setup-uv v9.0.0, pinned to its full commit SHA.
         uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9
         with:
           version: "0.11.27"
