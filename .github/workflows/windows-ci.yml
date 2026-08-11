@@ -35,8 +35,8 @@ jobs:
     timeout-minutes: 20
     steps:
       - name: Check out the companion repository
-        # actions/checkout v5.1.0, pinned to its full commit SHA.
-        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        # actions/checkout v7.0.1, pinned to its full commit SHA.
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
 
       - name: Install locked uv and Python 3.14
         # astral-sh/setup-uv v9.0.0, pinned to its full commit SHA.
@@ -98,8 +98,8 @@ jobs:
     timeout-minutes: 45
     steps:
       - name: Check out the companion repository
-        # actions/checkout v5.1.0, pinned to its full commit SHA.
-        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+        # actions/checkout v7.0.1, pinned to its full commit SHA.
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
 
       - name: Install locked uv and Python 3.14
         # astral-sh/setup-uv v9.0.0, pinned to its full commit SHA.
