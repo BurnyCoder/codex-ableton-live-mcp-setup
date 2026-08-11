@@ -1,0 +1,12 @@
+# Global context: normalize authored text for deterministic Windows/CI builds while preserving binary evidence exactly.
+* text=auto
+*.md text eol=lf
+*.ps1 text eol=lf
+*.py text eol=lf
+*.json text eol=lf
+*.toml text eol=lf
+*.lock text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.png binary
+*.pdf binary
