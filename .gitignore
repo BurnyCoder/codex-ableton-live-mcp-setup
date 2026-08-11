@@ -1,0 +1,20 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Local setup inputs and generated evidence may contain machine-specific paths.
+.env
+.local/
+logs/
+output/
+tmp/
+
+# Never nest the downloaded upstream checkout inside the public repository.
+ableton-live-mcp/

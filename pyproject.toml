@@ -1,0 +1,17 @@
+[project]
+name = "codex-ableton-live-mcp-setup"
+version = "0.1.0"
+description = "Reproducible Windows setup and validation for connecting Ableton Live MCP to Codex."
+readme = "README.md"
+authors = [
+    { name = "BurnyCoder", email = "34103661+BurnyCoder@users.noreply.github.com" }
+]
+requires-python = ">=3.14"
+dependencies = []
+
+[project.scripts]
+codex-ableton-live-mcp-setup = "codex_ableton_live_mcp_setup:main"
+
+[build-system]
+requires = ["uv_build>=0.11.27,<0.12.0"]
+build-backend = "uv_build"
