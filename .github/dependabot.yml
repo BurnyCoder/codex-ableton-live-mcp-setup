@@ -1,0 +1,11 @@
+# Weekly pull requests keep immutable GitHub Action pins reviewable and current.
+# Source: https://docs.github.com/code-security/dependabot/working-with-dependabot/dependabot-options-reference
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: chore(actions)

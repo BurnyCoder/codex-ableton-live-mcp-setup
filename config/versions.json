@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "upstream_repository": "https://github.com/bschoepke/ableton-live-mcp.git",
+  "base_commit": "70f7df9192b78d9bd9405f369c9e046c88f1610e",
+  "pull_request": {
+    "number": 15,
+    "ref": "refs/pull/15/head",
+    "commit": "a93d223440b275feda2fb08cdf814238c1270e00",
+    "parent": "70f7df9192b78d9bd9405f369c9e046c88f1610e",
+    "tree": "2d97d0b270f4d9058e2fd624af7e3b769e3493bd"
+  },
+  "package_version": "0.1.1",
+  "tool_count": 37,
+  "accepted_windows_failures": [
+    "tests/test_agent_audio_tap_build.py::test_agent_audio_tap_builds_amxd_container",
+    "tests/test_agent_m4l_build.py::test_agent_m4l_host_patch_contains_runtime_and_role_io"
+  ]
+}
