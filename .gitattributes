@@ -1,4 +1,4 @@
-# Global context: normalize authored text for deterministic Windows/CI builds while preserving binary evidence exactly.
+# Global context: normalize authored text for deterministic Windows/CI builds while preserving PNG assets exactly.
 * text=auto
 *.md text eol=lf
 *.ps1 text eol=lf
@@ -9,4 +9,3 @@
 *.yml text eol=lf
 *.yaml text eol=lf
 *.png binary
-*.pdf binary

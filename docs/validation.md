@@ -114,15 +114,15 @@ This proves the actual configured STDIO command and schema loading without
 introducing a destructive regression test. Never use a set mutation merely to
 prove that `approve` suppresses approval prompts.
 
-## Logs and public evidence
+## Logs and shared summaries
 
 Every command streams timestamped subprocess command, stdout, and stderr to the
 terminal and an ignored local log without truncation. When an LLM prompt is used,
 store the complete prompt and output in the same timestamped evidence session.
 
 Raw logs are private because they may contain usernames, machine names, absolute
-paths, process IDs, Live object IDs, set signatures, and set contents. Public
-reports may include versions, public SHAs, counts, booleans, failure node IDs,
+paths, process IDs, Live object IDs, set signatures, and set contents. Published
+summaries may include versions, public SHAs, counts, booleans, failure node IDs,
 and high-level results after redaction.
 
 Never publish a screenshot until it has been visually inspected, limited to an

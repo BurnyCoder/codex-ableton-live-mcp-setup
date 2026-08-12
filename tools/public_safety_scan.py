@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """Fail when the public tree contains credentials or private setup evidence.
 
-Global context: the companion repository must publish reproducible summaries,
-not machine-specific transcripts, runtime configuration, Live object IDs, or
-credentials.  This scanner is intentionally conservative and runs after report
-generation so it checks extracted PDF text and metadata too.
+Global context: the companion repository must publish setup documentation, not
+machine-specific transcripts, runtime configuration, Live object IDs, or
+credentials. This scanner checks text and PNG metadata conservatively.
 
 Reference: https://docs.github.com/code-security/secret-scanning/introduction/about-secret-scanning
 """
@@ -117,22 +116,9 @@ def png_text(path: Path) -> str:
     return "\n".join(chunks)
 
 
-def pdf_text(path: Path) -> str:
-    """Extract PDF metadata and page text using the release verifier dependency."""
-
-    from pypdf import PdfReader
-
-    reader = PdfReader(str(path), strict=True)
-    metadata = "\n".join(f"{key}: {value}" for key, value in (reader.metadata or {}).items())
-    pages = "\n".join(page.extract_text() or "" for page in reader.pages)
-    return metadata + "\n" + pages
-
-
 def public_text(path: Path) -> str | None:
-    """Return searchable public text for supported source and artifact formats."""
+    """Return searchable public text for supported source and PNG formats."""
 
-    if path.suffix.casefold() == ".pdf":
-        return pdf_text(path)
     if path.suffix.casefold() == ".png":
         return png_text(path)
     if path.name == ".env.example" or path.suffix.casefold() in TEXT_SUFFIXES or path.name == "uv.lock":

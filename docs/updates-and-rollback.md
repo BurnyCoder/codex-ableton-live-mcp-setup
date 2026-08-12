@@ -42,7 +42,7 @@ dedicated pull request that:
 4. runs the full suite on Windows;
 5. records zero failures or changes the accepted failure list with justification;
 6. repeats STDIO and pre-Live integration checks;
-7. updates source citations, experiment report, lockfile, and release notes;
+7. updates source citations, affected documentation, lockfile, and release notes;
 8. completes the manual Live release checklist before tagging.
 
 Do not automatically cherry-pick PR #15 when upstream already contains an
