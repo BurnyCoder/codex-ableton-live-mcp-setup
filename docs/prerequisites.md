@@ -16,8 +16,8 @@ macOS, but the automation and acceptance criteria here are Windows-specific.
 | Codex | Desktop app and CLI signed in to the same local Codex host | `codex --version` |
 | Ableton Live | Live 12 installed and authorized | Help → About Live |
 
-`uv` can download a compatible Python automatically. The verified baseline used
-Python 3.14.2 and `uv` 0.11.27; those patch versions are evidence, not hard
+`uv` can download a compatible Python automatically. The verified setup used
+Python 3.14.2 and `uv` 0.11.27; those patch versions are observations, not hard
 minimums. Astral documents both the Windows installer and managed Python behavior
 in its [`uv` installation guide](https://docs.astral.sh/uv/getting-started/installation/)
 and [Python guide](https://docs.astral.sh/uv/guides/install-python/).

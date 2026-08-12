@@ -27,7 +27,8 @@ recheck time-sensitive claims before a release.
 
 Primary vendor/project documentation is used for product behavior. Public Git
 object identities and the pinned checkout are used for reproducibility. The
-baseline report distinguishes observed results from upstream or vendor claims.
+documentation distinguishes observed verification results from upstream or
+vendor claims.
 
 No external source can guarantee that an arbitrary Live Set is safe to mutate.
 That residual risk is managed through backups, staged read-only validation,

@@ -1,4 +1,4 @@
-<!-- Global context: contribution workflow for changes to automation, documentation, tests, pins, and reports. -->
+<!-- Global context: contribution workflow for changes to automation, documentation, tests, and pins. -->
 
 # Contributing
 
@@ -15,7 +15,7 @@ Thank you for helping make the Windows setup safer and more reproducible.
    ```
 
 4. Add a failing test for changed behavior before implementation.
-5. Keep changes modular and update the relevant guide or report.
+5. Keep changes modular and update the relevant guide.
 
 ## Pull-request requirements
 
@@ -34,7 +34,8 @@ tokens, and non-default set contents.
 
 Changes to `config/versions.json` need an isolated pin-update pull request. Verify
 the exact upstream commit, parent, and tree; run the complete pinned upstream
-suite; update the experiment record; and explain why the new source is trusted.
+suite; update the affected documentation; and explain why the new source is
+trusted.
 
 ## Code and documentation style
 
@@ -47,7 +48,7 @@ suite; update the experiment record; and explain why the new source is trusted.
   against current official OpenAI documentation.
 - Use forward-slash path examples inside `.env` and TOML.
 - Avoid duplicating long instructions: link to the canonical guide.
-- Keep logs complete locally but reports concise and sanitized.
+- Keep logs complete locally and shared summaries concise and sanitized.
 
 ## Live testing
 

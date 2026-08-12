@@ -15,9 +15,7 @@ codex-ableton-live-mcp-setup = "codex_ableton_live_mcp_setup.cli:main"
 
 [dependency-groups]
 dev = [
-    "pypdf>=5",
     "pytest>=8",
-    "reportlab>=4.2",
 ]
 
 [build-system]

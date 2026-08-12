@@ -16,7 +16,7 @@ signed-off Live acceptance run. Record only sanitized evidence.
 - [ ] MIT `LICENSE` and `THIRD_PARTY_NOTICES.md` are present.
 - [ ] One correctness/security/maintainability/reliability/design review is done.
 
-## Automated Windows evidence
+## Automated Windows checks
 
 - [ ] Companion unit suite passes.
 - [ ] `manage.ps1 doctor --json` returns valid structured output.
@@ -31,8 +31,8 @@ signed-off Live acceptance run. Record only sanitized evidence.
 - [ ] `ableton-live-mcp-validate --skip-live` passes.
 - [ ] STDIO returns 37 unique valid schemas, preserves UTF-8/LF, returns `-32700`
       for malformed JSON, and recovers for the next request.
-- [ ] Secret/personal-path scan, Markdown links, PDF page/text checks, and locked
-      dependency checks pass.
+- [ ] Secret/personal-path scan, Markdown links, and locked dependency checks
+      pass.
 
 ## Authorized Live acceptance
 
@@ -50,15 +50,12 @@ signed-off Live acceptance run. Record only sanitized evidence.
 - [ ] Optional Computer Use instructions match current official OpenAI Docs and
       availability/permission boundaries are still accurate.
 
-## Public artifacts
+## Published documentation
 
-- [ ] Baseline Markdown report contains question, hypothesis, method, results,
-      interpretation, limitations, conclusion, and next hypothesis.
-- [ ] PDF is regenerated from the sanitized baseline, all pages are rendered,
-      visually inspected, and contain no clipping or personal data.
 - [ ] Any published PNG is Ableton-only, nonblank, visually inspected, and
       metadata-checked.
-- [ ] README verified-version claims match the report and current manifest.
+- [ ] README and version-specific guidance match the current manifest and the
+      signed-off Live validation result.
 - [ ] Source links resolve and unstable UI claims have an access/review date.
 - [ ] Release notes state Windows-only validation, allow-all risk, and Live
       Intro/Standard M4L limitation.
@@ -74,8 +71,7 @@ signed-off Live acceptance run. Record only sanitized evidence.
       enabled.
 - [ ] `main` protection requires a pull request and the Windows CI check for
       future changes.
-- [ ] `v1.0.0` tag points to the reviewed merge and the release contains the
-      sanitized PDF.
+- [ ] The release tag, notes, and intended assets match the reviewed merge.
 - [ ] No fork, upstream branch, or upstream pull request was created.
 
 Release sign-off should record date, companion commit, manifest identities,

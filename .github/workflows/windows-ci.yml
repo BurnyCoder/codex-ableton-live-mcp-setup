@@ -59,38 +59,11 @@ jobs:
           uv run --locked --no-sync python tools/check_markdown.py .
           --require-readme-contract
 
-      - name: Build the sanitized experiment PDF
-        run: >-
-          uv run --locked --no-sync python tools/build_report_pdf.py
-          --input reports/experiments/2026-08-11-windows-baseline.md
-          --output reports/codex-ableton-live-mcp-setup-report.pdf
-
-      - name: Verify PDF structure and extracted text
-        run: >-
-          uv run --locked --no-sync python tools/verify_pdf.py
-          reports/codex-ableton-live-mcp-setup-report.pdf
-          --source reports/experiments/2026-08-11-windows-baseline.md
-          --min-pages 1
-
-      - name: Confirm the committed PDF matches canonical Markdown
-        run: git diff --exit-code -- reports/codex-ableton-live-mcp-setup-report.pdf
-
       - name: Scan the public tree for private evidence and secrets
         run: uv run --locked --no-sync python tools/public_safety_scan.py .
 
       - name: Confirm quality checks did not rewrite locked inputs
         run: git diff --exit-code -- pyproject.toml uv.lock
-
-      - name: Upload the verified release report
-        # actions/upload-artifact v7.0.1, pinned to its full commit SHA.
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
-        with:
-          name: codex-ableton-live-mcp-setup-report-${{ github.sha }}
-          path: |
-            reports/experiments/2026-08-11-windows-baseline.md
-            reports/codex-ableton-live-mcp-setup-report.pdf
-          if-no-files-found: error
-          retention-days: 14
 
   upstream-integration:
     name: Exact upstream integration

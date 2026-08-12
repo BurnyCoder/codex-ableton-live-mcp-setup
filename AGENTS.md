@@ -47,7 +47,7 @@ validation mismatches, and preserve user work.
 3. Run the focused test, then the complete companion suite.
 4. Exercise the wrapper exactly as a Windows user would, including `--dry-run`.
 5. Inspect full timestamped logs for warnings, secrets, and inconsistent output.
-6. Update documentation and a sanitized experiment record when behavior changes.
+6. Update the affected setup documentation when behavior changes.
 7. Perform one correctness, security, maintainability, reliability, and design
    review before requesting merge.
 
@@ -58,7 +58,7 @@ external formats or behavior. Avoid comments that merely restate syntax.
 
 Use `apply_patch` for intentional text changes. Use formatters only after ensuring
 they do not rewrite unrelated user work. Never put credentials in Git, logs,
-fixtures, screenshots, or reports.
+fixtures, screenshots, or shared summaries.
 
 ## Required validation
 
@@ -82,15 +82,12 @@ Live end-to-end checks require a human-controlled disposable/default set. Requir
 working visual dependencies, and a nonblank Ableton-only capture. Do not claim
 end-to-end success from source tests alone.
 
-## Documentation and evidence
+## Documentation and local evidence
 
-- Keep the README methodology-first and concise; put operational detail in
-  `docs/` and experiment evidence in `reports/`.
+- Keep the README setup-first and concise; put extended operational detail in
+  `docs/`.
 - Use current primary documentation from upstream, OpenAI, Ableton, Astral,
   Python, GitHub, or Microsoft. Recheck unstable UI instructions before release.
-- Record each experiment as a scientific loop: question, prior information,
-  hypothesis, method, observations, interpretation, limitations, conclusion, and
-  next hypothesis.
 - Preserve full local prompts and outputs in ignored timestamped logs. Publish
   only sanitized summaries.
 - Do not publish screenshots unless they show only Ableton, have been inspected
@@ -99,6 +96,6 @@ end-to-end success from source tests alone.
 ## Release discipline
 
 Pin updates require a dedicated pull request with reviewed source identity,
-expected tests, reports, and documentation updated together. Windows CI must pass
-before merge. End-to-end Live acceptance remains a manual signed-off checklist.
-Never create an upstream branch or PR from this companion repository.
+expected tests, and affected documentation updated together. Windows CI must
+pass before merge. End-to-end Live acceptance remains a manual signed-off
+checklist. Never create an upstream branch or PR from this companion repository.
